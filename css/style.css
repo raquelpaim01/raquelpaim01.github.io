@@ -1,0 +1,226 @@
+/*reset*/
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+/*variaveis*/
+:root {
+    --main-color: #ffdc1f;
+    --main-text-color: #FFF;
+    --border-color: #ffdc1f;
+    --bio-bg-color: #f492cf;
+    --bio-border-color: #293544;
+    --about-bg-color: linear-gradient(to right,#191a26,#111821);
+    
+}
+
+/*geral*/
+.highlight {
+    color:var(--main-color);
+}
+/*Containers*/
+#container {
+    display: flex;
+    flex-direction: row;
+    color : var(--main-text-color);
+}
+
+#bio-container {
+    flex: 1 1 20%;
+    min-height: 100vh;
+    background-color: var(--bio-bg-color);
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid var(--bio-border-color);
+    background-image: var(--about-bg-color);
+}
+#about-container {
+    flex: 1 1 80%;
+    background-image: var(--about-bg-color);
+    padding: 50px;
+
+}
+#bio-container #welcome-text {
+    font-weight: bold;
+
+}
+#bio-container h2 {
+    margin-bottom: 25px;
+}
+#bio-container p {
+    margin-bottom: 10px;
+}
+
+#bio-im {
+    width: 125px;
+    height: 100px;
+    border-radius: 10%;
+    margin-bottom: 15%;
+}
+#bio-img {
+    width: 125px;
+    height: 175px;
+    border-radius: 10%;
+    margin-bottom: 10%
+
+}
+#social-container {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    border-radius: 1px solid var(--border-color);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+
+}
+#social-container li {
+    flex: 1 1 0;
+    max-width: 60px;
+    
+
+}
+#social-container li a {
+
+    color: var(--main-color);
+    font-size: 30px;
+
+}
+#email-container {
+    display: flex;
+    justify-content: center;
+}
+#email-container ion-icon,
+
+#email-container ion-icon {
+    color: var(--main-color);
+    font-size: 20px;
+    margin-right: 5px;
+    max-width: 20%;
+
+}
+#email-container a {
+    flex: 1 1 0;
+    color: var(--main-text-color);
+    text-decoration: none;
+    max-width: 125px;
+}
+
+
+/*about container*/
+#name {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+#title {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+#description {
+    max-width: 55%;
+    margin-bottom: 10%;
+    text-align: justify;
+    
+}
+#btn-projects {
+    font-weight: bold;
+    font-style:oblique;
+    color: var( --bio-border-color);
+    background-color: #fffb8f;
+    border: 2px solid var(--main-color);
+    border-radius: 5px;
+    text-decoration:none;
+    transition: .5s;
+    margin: 25px;
+    margin-left: 0px ;
+    padding: 12px 10px;
+    width: 150px;
+    text-align: center;
+    display: flex;
+}
+#btn-projects ion-icon,
+#btn-projects span {
+    flex: 1 1 0;
+}
+#btn-projects ion-icon {
+    font-size: 10px;
+    max-width: 10px;
+}
+#btn-projects:hover {
+    background-color: transparent;
+}
+
+#skills-section-title {
+    border-top: 1px solid var(--border-color);
+    padding-top: 10px;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.skills-box {
+    flex: 1 1   20%;
+    max-width: 20%;
+    margin-bottom: 5%;
+}
+.skills-title {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    padding-left: 10px;
+    border-left: 5px solid var(--main-color);
+
+}
+
+/*mobile*/
+@media(max-width: 1350px){
+
+    #container {
+       flex-direction: column ;
+     }
+    #bio-container {
+        min-width: auto;
+        border-right: none;
+        border-bottom: 5px var(--bio-border-color);
+    }
+    #bio-container h2 {
+        display: none;
+
+    }
+    #bio-container p {
+        max-width: 40%;
+        margin: 10px auto;
+    }
+    #about-container {
+        text-align: left;
+        padding: 20%;
+    }
+    #about-container .description {
+        margin: 10px auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+    #name {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    #btn-projects {
+        margin: 25px auto;
+    }
+   
+    .skills-box {
+        flex : 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    .skills-box i{
+        font-size: 40px;
+    }
+}
+
